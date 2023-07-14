@@ -5,7 +5,7 @@ from django.shortcuts import render , HttpResponse
 def Home (request):
     return render(request,"index.html")
 def About(request):
-    return HttpResponse ("นี่คือข้อมูลของฉันหากคุณกำลังตามหา...")
+    return render (request,"about.html")
 def Contact(request):
-    return HttpResponse ("สามารถติดต่อฉันได้จากที่นี่...")
+    return render (request,"contact.html")
     
