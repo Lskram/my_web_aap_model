@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+<!---->
+{% block title %}
+    ข้อมูลนักศึกษา
+{% endblock title %}
+<!---->
+{% block Content %}
+<!---->
+  {{ message }}
+  <table class="table">
+      <thead>
+        <tr>
+            <td>
+              ID
+            </td>
+            <td>{{ student.std_id }}</td>
+        </tr>
+
+        <tr>
+            <td>
+              Prefix
+            </td>
+            <td>{{ student.prefix_str }}</td>
+        </tr>
+
+        <tr>
+            <td>
+              Name
+            </td>
+            <td>{{ student.name }}</td>
+        </tr>
+
+        <tr>
+            <td>
+              Lastnname
+            </td>
+            <td>{{ student.lastname }}</td>
+      </tr>
+        <tr>
+          <td>
+            studentPhone
+          </td>
+          <td>{{ student.phone }}</td>
+        </tr>
+
+        <tr>
+          <td>
+            studentaddress
+          </td>
+          <td>{{ student.address }}</td>
+      </tr>
+
+      </thead>
+      <tbody>
+          {% for student in students %}
+          <tr>
+            <td><a href=>{{ student.std_id }}</a></td>
+            <td>{{ student.prefix }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.lastname }}</td>
+            <td>{{ student.phone }}</td>
+            <td>{{ student.address }}</td>
+          </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+{% endblock Content %}
